@@ -3,6 +3,8 @@ package br.com.alunoonline.api.controller;
 import br.com.alunoonline.api.model.Professor;
 import br.com.alunoonline.api.service.ProfessorService;
 import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,6 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/professores")
 public class ProfessorController {
 
+    @Autowired
     private final ProfessorService professorService;
 
     public ProfessorController(ProfessorService professorService) {
